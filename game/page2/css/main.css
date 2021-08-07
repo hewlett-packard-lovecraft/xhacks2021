@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v4_5 {
+  width: 786px;
+  height: 872px;
+  background: url("../images/v4_5.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v4_6 {
+  width: 360px;
+  height: 872px;
+  background: rgba(239,235,142,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v4_7 {
+  width: 302px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 1;
+  text-align: left;
+}
+.v4_9 {
+  width: 302px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 230px;
+  left: 80px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 1;
+  text-align: left;
+}
+.v4_10 {
+  width: 302px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 400px;
+  left: 80px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 1;
+  text-align: left;
+}
+.v4_11 {
+  width: 302px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 590px;
+  left: 80px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 1;
+  text-align: left;
+}
+.v4_14 {
+  width: 282px;
+  height: 68px;
+  background: rgba(196,196,196,1);
+  opacity: 1;
+  position: absolute;
+  top: 124px;
+  left: 36px;
+  overflow: hidden;
+}
+.v4_15 {
+  width: 282px;
+  height: 68px;
+  background: rgba(196,196,196,1);
+  opacity: 1;
+  position: absolute;
+  top: 314px;
+  left: 36px;
+  overflow: hidden;
+}
+.v4_16 {
+  width: 282px;
+  height: 68px;
+  background: rgba(196,196,196,1);
+  opacity: 1;
+  position: absolute;
+  top: 510px;
+  left: 36px;
+  overflow: hidden;
+}
+.v4_17 {
+  width: 240px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 708px;
+  left: 46px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 1;
+  text-align: left;
+}

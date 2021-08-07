@@ -46,23 +46,24 @@
       <h1><a onclick="close_sidenav()">Home</a></h1>
       <h1><a onclick="toggle_lectnav()">Lecture</a></h1>
     </div>
-    <div class="container">
-      <!-- Lecture -->
-      <div id="lecture" class="overlay">
-        <div id="lecture-sidenav" class="sidenav">
-          <!-- Lecture List -->
-          <ul id="lecture-list" style="opacity: 0">
-            <li onclick="toggle_lecture('linear-approximation')">
-              Linear Approximation
-            </li>
-            <li onclick="toggle_lecture('implicit-differentiation')">
-              Implicit Differentiation
-            </li>
-            <li>Related Rates</li>
-            <li>Optimzation</li>
-          </ul>
-        </div>
-        <!-- Lecture Contents -->
+
+    <!-- Lecture -->
+    <div id="lecture" class="overlay">
+      <div id="lecture-sidenav" class="sidenav">
+        <!-- Lecture List -->
+        <ul id="lecture-list" style="opacity: 0">
+          <li onclick="toggle_lecture('linear-approximation')">
+            Linear Approximation
+          </li>
+          <li onclick="toggle_lecture('implicit-differentiation')">
+            Implicit Differentiation
+          </li>
+          <li>Related Rates</li>
+          <li>Optimzation</li>
+        </ul>
+      </div>
+      <!-- Lecture Contents -->
+      <div class=".container">
         <div id="lecture-textbox">
           <div id="lecture-linear-approximation" class="lecture-text">
             <h1>Linear Approximation</h1>
