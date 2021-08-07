@@ -1,11 +1,7 @@
 var lectnav_enabled = false
 
-/*
-var lectures_enabled = {
-	"linear-approximation": false
-}*/
-
 var prev_lecture = "linear-approximation";
+
 
 // Slides out the sidenav
 function open_sidenav() {
@@ -22,12 +18,12 @@ function close_sidenav() {
  	toggle_lectnav();
 }
 
+
 // Toggles the lecture panel
 function toggle_lectnav() {
 	// If the lecture panel is not displayed, display it.
 	if(!lectnav_enabled) {
-		document.getElementById("lecture-list").classList.remove("lecture-fade-out");
-		document.getElementById("lecture-list").classList.add("lecture-fade-in");
+		lecture_fade_in("list")
 
 		document.getElementById("lecture").style.width = "100vw";
 		document.getElementById("lecture-list").style.opacity = "1";
@@ -35,8 +31,7 @@ function toggle_lectnav() {
 	}
 	// If the lecture panel is displayed, hide it.
 	else if(lectnav_enabled) {
-		document.getElementById("lecture-list").classList.remove("lecture-fade-in");
-		document.getElementById("lecture-list").classList.add("lecture-fade-out");
+		lecture_fade_out("list")
 
 		document.getElementById("lecture").style.width = "0";
 		document.getElementById("lecture-list").addEventListener("animationend", set_opacity_none("lecture-list"));
@@ -48,41 +43,51 @@ function toggle_lectnav() {
 	}
 }
 
-function toggle_lecture(data) {
+function toggle_lecture(incoming) {
 	// Fade out the previous lecture
-	document.getElementById("lecture-" + prev_lecture).classList.remove("lecture-fade-in");
-	document.getElementById("lecture-" + prev_lecture).classList.add("lecture-fade-out");
+	lecture_fade_out(prev_lecture)
 
 	document.getElementById("lecture-" + prev_lecture).style.opacity = '0';
 	document.getElementById("lecture-" + prev_lecture).addEventListener("animationend", set_display_none("lecture-" + prev_lecture));
 
 	// Fade in the active lecture
-	document.getElementById("lecture-" + data).classList.remove("lecture-fade-out");
-	document.getElementById("lecture-" + data).classList.add("lecture-fade-in");
+	lecture_fade_in(incoming)
 
-	document.getElementById("lecture-" + data).style.opacity = "1";
-	document.getElementById("lecture-" + data).style.display = "inline-block";
+	document.getElementById("lecture-" + incoming).style.opacity = "1";
+	document.getElementById("lecture-" + incoming).style.display = "inline-block";
 
-	prev_lecture = data;
+	prev_lecture = incoming;
 }
 
 function close_lecture(data) {
 	// Close the lecture
 	if(document.getElementById("lecture-" + data).style.opacity == "1") {
-		document.getElementById("lecture-" + prev_lecture).classList.remove("lecture-fade-in");
-		document.getElementById("lecture-" + prev_lecture).classList.add("lecture-fade-out");
+		lecture_fade_out(prev_lecture)
 
 		document.getElementById("lecture-" + data).style.opacity = "0";
 	}
 }
 
-function set_display_none(data) {
-	document.getElementById(data).style.display = "none";
+
+// Handy functions
+function set_display_none(elem) {
+	document.getElementById(elem).style.display = "none";
 }
 
-function set_opacity_none(data) {
-	document.getElementById(data).style.opacity = "0";
+function set_opacity_none(elem) {
+	document.getElementById(elem).style.opacity = "0";
 }
+
+function lecture_fade_in(suffix) {
+	document.getElementById("lecture-" + suffix).classList.remove("lecture-fade-out");
+	document.getElementById("lecture-" + suffix).classList.add("lecture-fade-in");
+}
+
+function lecture_fade_out(suffix) {
+	document.getElementById("lecture-" + suffix).classList.remove("lecture-fade-in");
+	document.getElementById("lecture-" + suffix).classList.add("lecture-fade-out");
+}
+
 
 // Updates the date
 function up_date() {
