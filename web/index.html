@@ -1,60 +1,87 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Math Site</title>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <head>
+    <title>Math Site</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-		<meta charset="utf-8">
-  		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="style.css"/>
-		<script async src="script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script async src="script.js"></script>
 
-		<!-- Importing some fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-	</head>
-	<body>
-		<!-- Header -->
-		<div id="header" class="header">
-			<h1><span onclick="open_sidenav()" style="font-family: 'Times New Roman'">&#8801;</span> Site Title</h1>
-		</div>
+    <!-- Importing some fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Bootstrap scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Header -->
+    <div id="header" class="header">
+      <h1>
+        <span onclick="open_sidenav()" style="font-family: 'Times New Roman'"
+          >&#8801;</span
+        >
+        Site Title
+      </h1>
+    </div>
 
-		<!-- Sidenav -->
-		<!-- I want there to be like logos next to the buttons that spin when you click on them -->
-		<div id="main-sidenav" class="overlay">
-		  <h1><a onclick="close_sidenav()">Home</a></h1>
-		  <h1><a onclick="toggle_lectnav()">Lecture</a></h1>
-		</div>
+    <!-- Sidenav -->
+    <!-- I want there to be like logos next to the buttons that spin when you click on them -->
+    <div id="main-sidenav" class="overlay">
+      <h1><a onclick="close_sidenav()">Home</a></h1>
+      <h1><a onclick="toggle_lectnav()">Lecture</a></h1>
+    </div>
+    <div class="container">
+      <!-- Lecture -->
+      <div id="lecture" class="overlay">
+        <div id="lecture-sidenav" class="sidenav">
+          <!-- Lecture List -->
+          <ul id="lecture-list" style="opacity: 0">
+            <li onclick="toggle_lecture('linear-approximation')">
+              Linear Approximation
+            </li>
+            <li onclick="toggle_lecture('implicit-differentiation')">
+              Implicit Differentiation
+            </li>
+            <li>Related Rates</li>
+            <li>Optimzation</li>
+          </ul>
+        </div>
+        <!-- Lecture Contents -->
+        <div id="lecture-textbox">
+          <div id="lecture-linear-approximation" class="lecture-text">
+            <h1>Linear Approximation</h1>
+            <p>It is a thing you can do in calculus.</p>
+          </div>
+          <div id="lecture-implicit-differentiation" class="lecture-text">
+            <h1>Implicit Differentiation</h1>
+            <p>It is also thing you can do in calculus.</p>
+          </div>
+        </div>
+      </div>
 
-		<!-- Lecture -->
-		<div id="lecture" class="overlay">
-			<div id="lecture-sidenav" class="sidenav">
-				<!-- Lecture List -->
-				<ul id="lecture-list" style="opacity: 0">
-					<li onclick="toggle_lecture('linear-approximation')">Linear Approximation</li>
-					<li onclick="toggle_lecture('implicit-differentiation')">Implicit Differentiation</li>
-					<li>Related Rates</li>
-					<li>Optimzation</li>
-				</ul>
-			</div>
-			<!-- Lecture Contents -->
-			<div id="lecture-textbox">
-				<div id="lecture-linear-approximation" class="lecture-text">
-					<h1>Linear Approximation</h1>
-					<p>It is a thing you can do in calculus.</p>
-				</div>
-				<div id="lecture-implicit-differentiation" class="lecture-text">
-					<h1>Implicit Differentiation</h1>
-					<p>It is also thing you can do in calculus.</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Home -->
-		<!-- The game itself will go here, most likely -->
-		<div id="home">
-		  	<h1>Welcome!</h1>
-			<p id='date'></p>
-		</div>
-	</body>
+      <!-- Home -->
+      <!-- The game itself will go here, most likely -->
+      <div id="home">
+        <h1>Welcome!</h1>
+        <p id="date"></p>
+      </div>
+    </div>
+  </body>
 </html>
+
