@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Template Site</title>
-		<script async src="script.js"></script>
+		<title>Math Site</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="stylesheet" href="style.css"/>
+		<script async src="script.js"></script>
+
+		<!-- Importing some fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
 	</head>
 	<body>
-		<h1>Welcome!</h1>
+		<!-- Header -->
+		<div id="header" class="header">
+			<h1><span onclick="open_sidenav()" style="font-family: 'Times New Roman'">&#8801;</span> Site Title</h1>
+		</div>
 
-		<p id='date'></p>
+		<!-- Sidenav -->
+		<!-- I want there to be like logos next to the buttons that spin when you click on them -->
+		<div id="main-sidenav" class="overlay">
+		  <h1><a onclick="close_sidenav()">Home</a></h1>
+		  <h1><a onclick="toggle_lectnav()">Lecture</a></h1>
+		</div>
+
+		<!-- Lecture -->
+		<div id="lecture" class="overlay">
+			<div id="lecture-sidenav" class="sidenav">
+				<ul id="lecture-list" style="opacity: 0">
+					<li onclick="toggle_lecture('linear-approximation')">Linear Approximation</li>
+					<li onclick="toggle_lecture('implicit-differentiation')">Implicit Differentiation</li>
+					<li>Related Rates</li>
+					<li>Optimzation</li>
+				</ul>
+			</div>
+			<div id="lecture-textbox">
+				<div id="lecture-linear-approximation" class="lecture-text">
+					<h1>Linear Approximation</h1>
+					<p>It is a thing you can do in calculus.</p>
+				</div>
+				<div id="lecture-implicit-differentiation" class="lecture-text">
+					<h1>Implicit Differentiation</h1>
+					<p>It is also thing you can do in calculus.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Home -->
+		<!-- The game itself will go here, most likely -->
+		<div id="home">
+		  	<h1>Welcome!</h1>
+			<p id='date'></p>
+		</div>
 	</body>
 </html>
