@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
   z-index: 2;
   background-color: #111;
   padding-top: 60px;
+  float: left;
 }
 
 #main-sidenav a {
@@ -58,7 +59,19 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 
 #lecture-sidenav {
   display: inline-block;
-  float: left;
+}
+
+#lecture-list li {
+  list-style-position: inside;
+  color: #818181;
+  padding-top: 0px;
+  padding-left: 16px;
+  padding-bottom: 0px;
+  transition: 0.3s;
+}
+
+#lecture-list li:hover {
+  color: #a1a1a1;
 }
 
 .lecture-fade-in {
@@ -80,13 +93,17 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 }
 
 #lecture-textbox {
-  float: left;
+  padding-top: 60px;
+  width: 80vw;
+  overflow: auto;
 }
 
 .lecture-text {
   display: none;
-  margin-left: 60px;
+  margin-left: 300px;
+  text-align: justify;
   opacity: 0;
+
 }
 
 #home {

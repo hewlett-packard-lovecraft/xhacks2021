@@ -38,3 +38,7 @@ function validate(e) {
   e.preventDefault();
   return false;
 }
+
+function change_page() {
+  window.location.replace("../page3/index.html")
+}
