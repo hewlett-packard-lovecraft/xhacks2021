@@ -1,5 +1,7 @@
 /* Font stuff */
 body {
+  background-color: #393939;
+  color: #f1f1f1;
   margin: 0;
   font-family: 'Lora', serif;
 }
@@ -20,6 +22,11 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 .header h1 {
   margin: 0;
   padding: 8px 16px 8px 16px;
+}
+
+#three_lines:hover {
+  color: #ffffff;
+  transition: 0.3s;
 }
 
 .overlay {
@@ -107,6 +114,8 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 }
 
 #home {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   transition: margin-left 0.9s;
   padding: 20px;
 }

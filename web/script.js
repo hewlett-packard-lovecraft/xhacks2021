@@ -6,11 +6,13 @@ var prev_lecture = "optimization";
 // Slides out the sidenav
 function open_sidenav() {
  	document.getElementById("main-sidenav").style.width = "250px";
+ 	document.getElementById("home").style.marginLeft = "250px";
 }
 
 // Slides in the sidenav
 function close_sidenav() {
  	document.getElementById("main-sidenav").style.width = "0";
+ 	document.getElementById("home").style.marginLeft = "0";
 
  	lectnav_enabled = true
  	toggle_lectnav();
@@ -29,7 +31,9 @@ function toggle_lectnav() {
 	}
 	// If the lecture panel is displayed, hide it.
 	else if(lectnav_enabled) {
-		lecture_fade_out("list")
+		if(document.getElementById("lecture-list").style.opacity == "1"){
+			lecture_fade_out("list")
+		}
 
 		document.getElementById("lecture").style.width = "0";
 		document.getElementById("lecture-list").addEventListener("animationend", set_opacity_none("lecture-list"));

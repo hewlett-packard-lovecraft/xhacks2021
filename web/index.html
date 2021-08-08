@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Math Site</title>
+    <title>Makin' Crates</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <meta charset="utf-8" />
@@ -36,10 +36,10 @@
     <!-- Header -->
     <div id="header" class="header">
       <h1>
-        <span onclick="open_sidenav()" style="font-family: 'Times New Roman'"
+        <span id="three_lines" onclick="open_sidenav()" style="font-family: 'Times New Roman'"
           >&#8801;</span
         >
-        Site Title
+        Makin' Crates
       </h1>
     </div>
 
@@ -111,7 +111,24 @@
       <!-- Home -->
       <!-- The game itself will go here, most likely -->
       <div id="home">
-        <h1>Welcome!</h1>
+        <div class="container">
+          <div id="home-row" class="row">
+            <div id="home-left-col" class="col-sm" style="padding-right:20px; border-right: 1px solid #ccc;">
+              <div id="home-crate" class="row">
+                <h1><img src="./assets/box.svg" width="64" height="64" alt="Box">Dimensions</h1>
+              </div>
+              <div id="home-wood" class="row">
+                <h1><img src="./assets/wood.svg" width="64" height="64" alt="Log">Materials</h1>
+              </div>
+            </div>
+            <div id="home-math" class="col-sm" style="padding-right:20px; border-right: 1px solid #ccc;">
+              <h1><img src="./assets/calculating.svg" width="64" height="64" alt="Calculator">Calculations</h1>
+            </div>
+            <div id="home-story" class="col-sm">
+              <h1><img src="./assets/feather.svg" width="64" height="64" alt="Feather">Story</h1>
+            </div>
+          </div>
+        </div>
       </div>
   </body>
 </html>
