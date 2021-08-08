@@ -1,6 +1,7 @@
 const track = "./media/xhacks.ogg";
 let spacebar_event_listener = false;
 const audioObj = new Audio(track);
+audioObj.loop = true;
 audioObj.play().catch(() => {
   spacebar_event_listener = true;
   setTimeout(() => {
