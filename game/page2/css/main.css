@@ -8,29 +8,21 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.v4_5 {
-  width: 786px;
-  height: 872px;
-  background: url("../images/v4_5.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+  right: 100px;
+  top: -20px;
 }
+
 .v4_6 {
   width: 360px;
-  height: 872px;
+  height: 672px;
   background: rgba(239, 235, 142, 1);
   opacity: 1;
   position: relative;
   top: 0px;
   left: 0px;
   overflow: hidden;
+  margin-left: 0px;
 }
 .v4_7 {
   width: 302px;
@@ -92,7 +84,7 @@ body {
 }
 .v4_15 {
   width: 282px;
-  height: 68px;
+  height: 50px;
   background: rgba(196, 196, 196, 1);
   opacity: 1;
   position: absolute;
@@ -126,7 +118,6 @@ body {
 .v4_19 {
   width: 786px;
   height: 872px;
-  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: relative;
   top: 0px;
