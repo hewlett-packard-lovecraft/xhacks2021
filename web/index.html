@@ -14,10 +14,13 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script async src="script.js"></script>
+    <script async src="music.js"> </script> 
+    <script async src="game.js"> </script> 
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+	  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
     <!-- Importing some fonts -->
     <link
@@ -107,22 +110,69 @@
       </div>
   	</div>
 
-    <!-- Home -->
-    <!-- The game itself will go here, most likely -->
-    <div id="rain">
+      <!-- Home -->
+      <!-- The game itself will go here, most likely -->
       <div id="home">
         <div class="container">
-          <div id="home-row" class="row" style="height: 85vh;">
+          <div id="home-row" class="row">
             <div id="home-left-col" class="col-sm" style="padding-right:20px; border-right: 1px solid #ccc;">
               <div id="home-crate" class="row">
                 <h1><img src="./assets/box.svg" width="64" height="64" alt="Box">Dimensions</h1>
+
+                <form onsubmit="return handle_submit()" name="form" class="v4_6 form-group">
+          <div class="form_length form-group">
+            <label for="length">
+              <span class="v4_7"> Length </span>
+            </label>
+            <input
+              type="number"
+              name="length"
+              id="length"
+              class="v4_14 form-control"
+              required
+            />
+          </div>
+
+          <div class="form_width form-group">
+            <label for="width">
+              <span class="v4_9"> Width </span>
+            </label>
+            <input
+              type="number"
+              name="width"
+              id="width"
+              class="v4_15 form-control"
+              required
+            />
+          </div>
+
+          <div id="home-wood" class="row">
+            <h1><img src="./assets/wood.svg" width="64" height="64" alt="Log">Materials</h1>
+            <div class="form_supplier form-group col">
+              <select name="supplier" id="supplier" class="v4_16 form-control">
+                <option value="richmond">Richmond Plywood</option>
+                <option value="windsor">Windsor Plywood</option>
+                <option value="smith">Smith's Plywood</option>
+              </select>
+            </div>
+            <div class="form_submit form-group col">
+              <input type="submit" value="Submit" class="form-control" />
+            </div>
+          </div>
+
+        </form>
               </div>
-              <div id="home-wood" class="row">
-                <h1><img src="./assets/wood.svg" width="64" height="64" alt="Log">Materials</h1>
-              </div>
+
             </div>
             <div id="home-math" class="col-sm" style="padding-right:20px; border-right: 1px solid #ccc;">
-              <h1><img src="./assets/calculating.svg" width="56" height="56" alt="Calculator">Calculations</h1>
+              <h1><img src="./assets/calculating.svg" width="64" height="64" alt="Calculator">Calculations</h1>
+        <div class="calculations">
+          Profit per hour per unit: $<span id="profit_per_crate_time">__</span
+          ><br />
+          Revenue per crate sold: $<span id="revenue_per_crate">__</span> <br />
+          Profit per crate sold: $<span id="profit_per_crate">__</span> <br />
+          Sustainability score: <span id="sscore">__</span>
+        </div>
             </div>
             <div id="home-story" class="col-sm">
               <h1><img src="./assets/feather.svg" width="64" height="64" alt="Feather">Story</h1>
