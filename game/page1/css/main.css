@@ -3,19 +3,18 @@
 }
 body {
   font-size: 14px;
+  background-color: black;
 }
+
 .flex_container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .v3_3 {
-  width: 736px;
-  height: 872px;
-  background: url("../images/v3_3.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+
+  background: black;
+
   opacity: 1;
   position: relative;
   top: 0px;
@@ -23,8 +22,7 @@ body {
   overflow: hidden;
 }
 .v3_4 {
-  width: 736px;
-  height: 187px;
+ 
   background: url("../images/v3_4.png");
   background-repeat: no-repeat;
   background-position: center center;
