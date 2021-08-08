@@ -1,18 +1,16 @@
 var lectnav_enabled = false
 
-var prev_lecture = "linear-approximation";
+var prev_lecture = "optimization";
 
 
 // Slides out the sidenav
 function open_sidenav() {
  	document.getElementById("main-sidenav").style.width = "250px";
- 	document.getElementById("lecture").style.marginLeft = "250px";
 }
 
 // Slides in the sidenav
 function close_sidenav() {
  	document.getElementById("main-sidenav").style.width = "0";
- 	document.getElementById("lecture").style.marginLeft = "0";
 
  	lectnav_enabled = true
  	toggle_lectnav();
@@ -87,12 +85,3 @@ function lecture_fade_out(suffix) {
 	document.getElementById("lecture-" + suffix).classList.remove("lecture-fade-in");
 	document.getElementById("lecture-" + suffix).classList.add("lecture-fade-out");
 }
-
-
-// Updates the date
-function up_date() {
-	document.getElementById("date").innerHTML = "It is currently " + new Date()
-}
-
-up_date(); // Call it once before the loop starts
-var interval = setInterval(up_date, 1000);
