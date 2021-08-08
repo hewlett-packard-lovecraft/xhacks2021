@@ -1,9 +1,16 @@
 /* Font stuff */
 body {
-  background-color: #393939;
+  background-color: #333333;
   color: #f1f1f1;
   margin: 0;
   font-family: 'Lora', serif;
+  animation: glow 3.5s linear infinite;
+}
+
+@keyframes glow {
+  0% {background-color: #333333;}
+  50% {background-color: #424242;}
+  100% {background-color: #333333;}
 }
 
 h1, h2, h3, h4, h5, h6, #lecture-list li {
@@ -15,8 +22,9 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
   position: sticky;
   margin: 0;
   width: 100%;
-  background: #555;
+  background: #111;
   color: #f1f1f1;
+  border-bottom: 1px solid white;
 }
 
 .header h1 {
@@ -86,8 +94,8 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .lecture-fade-out {
@@ -95,8 +103,8 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 }
 
 @keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
+  0% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 #lecture-textbox {
@@ -106,6 +114,7 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 }
 
 .lecture-text {
+  color: #313131;
   display: none;
   margin-left: 300px;
   text-align: justify;
