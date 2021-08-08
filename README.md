@@ -1,5 +1,5 @@
 ## Makin' Crates
-Makin' Crates is an educational game to teach students calculus concepts like Optimization as well as the mindset of sustainability. The player is the owner of a crate factory, and must find the optimum crate size for maximum profit. Happy optimizing!
+Makin' Crates is an educational game to teach students calculus concepts like Optimization as well as the mindset of sustainability. The player has recently inherited his grandfather's wooden crate factory, and it's up to them to discover the optimum crate size. Happy optimizing!
 
 ## Demo Link
 https://hewlett-packard-lovecraft.github.io/xhacks2021/web/
