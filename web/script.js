@@ -2,14 +2,22 @@ var lectnav_enabled = false;
 
 var prev_lecture = "optimization";
 
+var ind = 0;
+var story_text = ["Your grandfather's wooden crate factory.", "Well, that's not really an accurate descriptor. It's *your* wooden crate factory, now.",
+"You were never really that close to your grandfather, but you understand that this factory really meant a lot to him.", 
+"So, although you don't really know much about how any of this works, you're going to try your best to honour his wishes to the fullest.",
+"Your grandfather's parting message?", "\"You can toggle the drop-down menu in the top-left corner.\"", "What did he mean by that?", "..."]
+
 // Slides out the sidenav
 function open_sidenav() {
   document.getElementById("main-sidenav").style.width = "250px";
+  document.getElementById("home").style.marginLeft = "250px";
 }
 
 // Slides in the sidenav
 function close_sidenav() {
   document.getElementById("main-sidenav").style.width = "0";
+  document.getElementById("home").style.marginLeft = "0";
 
   lectnav_enabled = true;
   toggle_lectnav();

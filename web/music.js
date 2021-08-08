@@ -1,4 +1,4 @@
-const track = "./media/xhacks.ogg";
+const track = "./assets/xhacks.ogg";
 let spacebar_event_listener = false;
 const audioObj = new Audio(track);
 audioObj.loop = true;
