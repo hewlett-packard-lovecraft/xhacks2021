@@ -159,16 +159,30 @@
           <div id="home-math" class="col-sm" style="padding-right:20px; border-right: 1px solid #ccc;">
             <h1><img src="./assets/calculating.svg" width="56" height="56" alt="Calculator">Calculations</h1>
             <div class="calculations">
-              Profit per hour per unit: $<span id="profit_per_crate_time">__</span
-              ><br />
-              Revenue per crate sold: $<span id="revenue_per_crate">__</span> <br />
-              Profit per crate sold: $<span id="profit_per_crate">__</span> <br />
-              Sustainability score: <span id="sscore">__</span>
+              Sustainability score (higher is better): <span id="sscore">__</span><br/>
+              Profit per hour per unit: $<span id="profit_per_crate_time">__</span><br/>
+              Profit per crate sold: $<span id="profit_per_crate">__</span><br/>
+              Crate selling price: $<span id="revenue_per_crate">__</span><br/>
+              Cost per crate: $<span id="cost_per_crate">__</span>
             </div>
+            <p><br/>The height of all crates is set to 5 feet.<br/>The cost of wood depends on the vendor:</p>
+            <ul>
+              <li>Richmond Plywood: $2.20 per square foot</li>
+              <li>Windsor Plywood: $2.40 per square foot</li>
+              <li>Smith's Plywood: $2.90 per square foot</li>
+            </ul>
+            <p>The time required to produce one crate is broken down as follows:</p>
+            <ol>
+              <li>The machinery must cut out the crate's six faces. Every minute, the machinery incises 4 feet of wood.</li>
+              <li>The faces of the crate are assembled together. This takes 5 minutes, regardless of crate size, somehow.</li>
+            </ol>
+            <p>A crate's price, funnily enough, can be modeled with the function \(P(x) = -0.0016x^2 + 4x\), where \(x\) is the volume, in cubic feet.</p>
           </div>
 
           <div id="home-story" class="col-sm">
-            <h1><img src="./assets/feather.svg" width="64" height="64" alt="Feather">Story</h1>
+            <div id="home-story-sub">
+              <h1><img src="./assets/feather.svg" width="64" height="64" alt="Feather">Story</h1>
+            </div>
           </div> 
         </div>     
       </div>

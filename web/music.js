@@ -4,9 +4,9 @@ const audioObj = new Audio(track);
 audioObj.loop = true;
 audioObj.play().catch(() => {
   spacebar_event_listener = true;
-  setTimeout(() => {
-    alert("Autoplay failed, press spacebar to play");
-  }, 1); // alert is now async so it doesn't pause the script
+  //setTimeout(() => {
+    //alert("Autoplay failed, press spacebar to play");
+  //}, 1); // alert is now async so it doesn't pause the script
 });
 
 document.addEventListener("keyup", (event) => {

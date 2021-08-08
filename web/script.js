@@ -6,7 +6,8 @@ var ind = 0;
 var story_text = ["Your grandfather's wooden crate factory.", "Well, that's not really an accurate descriptor. It's *your* wooden crate factory, now.",
 "You were never really that close to your grandfather, but you understand that this factory really meant a lot to him.", 
 "So, although you don't really know much about how any of this works, you're going to try your best to honour his wishes to the fullest.",
-"Your grandfather's parting message?", "\"You can toggle the drop-down menu in the top-left corner.\"", "What did he mean by that?", "..."]
+"Your grandfather's parting message?", "\"You can toggle the drop-down menu in the top-left corner.\"", "What did he mean by that?", "...", 
+"For real though, you'll want to check out that drop-down menu.", "(There's music! Press space.)"]
 
 // Slides out the sidenav
 function open_sidenav() {
@@ -108,7 +109,7 @@ function add_story() {
 		var new_p = document.createElement("p");
 	   	var text = document.createTextNode(story_text[ind]);
 	   	new_p.appendChild(text);
-	   	var elem = document.getElementById("home-story");
+	   	var elem = document.getElementById("home-story-sub");
 	   	new_p.classList.remove("lecture-fade-out");
 		new_p.classList.add("lecture-fade-in");
 	   	elem.appendChild(new_p);
