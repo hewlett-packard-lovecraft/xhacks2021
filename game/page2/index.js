@@ -26,3 +26,7 @@ function handle_submit() {
 
   console.log("profit_per_crate_time " + profit_per_crate_time);
 }
+
+function change_page() {
+  window.location.replace("../page3/index.html")
+}
