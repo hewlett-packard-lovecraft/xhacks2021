@@ -36,12 +36,12 @@ function toggle_lectnav() {
   }
   // If the lecture panel is displayed, hide it.
   else if (lectnav_enabled) {
-    lecture_fade_out("list");
+  	if(document.getElementById("lecture-list").style.opacity != "0") {
+	    lecture_fade_out("list");
 
-    document.getElementById("lecture").style.width = "0";
-    document
-      .getElementById("lecture-list")
-      .addEventListener("animationend", set_opacity_none("lecture-list"));
+	    document.getElementById("lecture").style.width = "0";
+	    document.getElementById("lecture-list").addEventListener("animationend", set_opacity_none("lecture-list"));
+	}
 
     lectnav_enabled = false;
 
