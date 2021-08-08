@@ -3,11 +3,17 @@ body {
   background-color: #393939;
   color: #f1f1f1;
   margin: 0;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
-h1, h2, h3, h4, h5, h6, #lecture-list li {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#lecture-list li {
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
 
@@ -82,21 +88,29 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
 }
 
 .lecture-fade-in {
-  animation: fadeIn 0.3s;  
+  animation: fadeIn 0.3s;
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .lecture-fade-out {
-  animation: fadeOut 0.3s;  
+  animation: fadeOut 0.3s;
 }
 
 @keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #lecture-textbox {
@@ -110,11 +124,10 @@ h1, h2, h3, h4, h5, h6, #lecture-list li {
   margin-left: 300px;
   text-align: justify;
   opacity: 0;
-
 }
 
 #home {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   transition: margin-left 0.9s;
   padding: 20px;
