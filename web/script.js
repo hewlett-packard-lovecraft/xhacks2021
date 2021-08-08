@@ -88,10 +88,27 @@ function lecture_fade_in(suffix) {
 }
 
 function lecture_fade_out(suffix) {
-  document
-    .getElementById("lecture-" + suffix)
-    .classList.remove("lecture-fade-in");
-  document
-    .getElementById("lecture-" + suffix)
-    .classList.add("lecture-fade-out");
+
+	document.getElementById("lecture-" + suffix).classList.remove("lecture-fade-in");
+	document.getElementById("lecture-" + suffix).classList.add("lecture-fade-out");
 }
+
+function add_story() {
+	if(typeof story_text[ind] === 'undefined') {
+	}
+	else {
+		var new_p = document.createElement("p");
+	   	var text = document.createTextNode(story_text[ind]);
+	   	new_p.appendChild(text);
+	   	var elem = document.getElementById("home-story");
+	   	new_p.classList.remove("lecture-fade-out");
+		new_p.classList.add("lecture-fade-in");
+	   	elem.appendChild(new_p);
+	   	ind = ind + 1;
+	   	console.log("running");
+	}
+
+}
+
+var interval = setInterval(add_story, 3000);
+
